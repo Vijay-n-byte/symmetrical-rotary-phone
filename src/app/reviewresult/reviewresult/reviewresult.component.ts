@@ -34,6 +34,7 @@ export class ReviewresultComponent implements OnInit{
   opp(m:number){
    let b:number=this.fin[m];
     if(this.cfin[m].ans==b){
+      this.coo++;
       return true;
     }
     else{

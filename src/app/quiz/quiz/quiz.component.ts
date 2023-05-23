@@ -41,6 +41,7 @@ export class QuizComponent implements OnInit {
 
   submit(f:NgForm){
     let aa:number=f.value.r;
+    // console.log(f);
   //  let aaa:string;
     this.users2.push(aa);
   }

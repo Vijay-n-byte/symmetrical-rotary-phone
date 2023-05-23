@@ -1,9 +1,18 @@
 .homepg{
+    /* background-image: url(/projectangular/src/assets/School-standardized-test-stock-photo1.jpg);
+    background-size:auto;
+    background-attachment:local;
+    background-repeat: repeat-y;
+    width:100vw;
+    height:100vh; */
+
     text-align: center;
     margin-top: 200px;
     font-size: 30px;
     font-style: italic;
     color: blue;
+    margin-bottom: 300px
+
 }
 
 

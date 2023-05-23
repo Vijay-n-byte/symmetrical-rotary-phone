@@ -1,9 +1,18 @@
 #plm{
-    font-size: 50px;
+    font-size: 40px;
+    text-align: center;
+    color: blue;
 }
 
 .bu{
     width:100px;
     height:70px;
     
+    
 }
+.as{
+    margin-left: 40px;
+}
+
+
+

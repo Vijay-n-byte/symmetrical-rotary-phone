@@ -1,12 +1,15 @@
 .container{
-    width: 100vw;
+    width: 100%;
     margin:auto;
     background-image: url(../assets/School-standardized-test-stock-photo1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-size:auto;
+    background-attachment:local;
+    background-repeat: repeat-y;
+    height:100%;
     margin-top: 0px;
+    border:0px 0px 50px 0px;
     border:1px solid black;
+    
 }
 .title{
     text-align: center; 
@@ -15,5 +18,7 @@
     font-family: 'Courier New', Courier, monospace;
     color:black;
     font-weight: lighter;
+    margin: 2%;
 
 }
+
