@@ -1,0 +1,21 @@
+<div>
+<p id="plm">correctanswers</p>
+<ul *ngFor="let k of cfinqns;let j=index">
+    <li>{{k.question}}</li> 
+    <li>{{k.option1}}</li>
+    <li>{{k.option2}}</li>
+    <li>{{k.option3}}</li>
+    <li>{{k.option4}}</li>
+    <div *ngIf="opp(j) ; else elseBlock">
+        <h5>status: correct</h5><br>
+        <h5>correct option:{{cfin[j].ans}}</h5>
+    </div>
+    <ng-template #elseBlock>
+        <h5>status: wrong</h5><br>
+        <h5>correct option:{{cfin[j].ans}}</h5>
+        <h5>your option:{{fin[j]}}</h5>
+    </ng-template>
+    <hr>
+</ul>
+</div>
+

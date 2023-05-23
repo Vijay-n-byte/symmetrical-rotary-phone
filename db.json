@@ -1,0 +1,96 @@
+{
+  "Questions":[
+    {
+      "Qno":1, 
+      "question":" Which of the following is a superclass of every class in Java?",
+      "option1":"ArrayList",
+      "option2":"Object class",
+      "option3":"Abstract class",
+      "option4":"String"
+    },
+    {
+      "Qno":2, 
+      "question":"What is the size of float variable?",
+      "option1":"8 bit",
+      "option2":"16 bit",
+      "option3":"32 bit",
+      "option4":"64 bit"
+    },
+    {
+      "Qno":3, 
+      "question":"Which will legally declare, construct, and initialize an array?",
+      "option1":"int [] myList = {'1', '2', '3'};",
+      "option2":"int [] myList = (5, 8, 2);",
+      "option3":"int myList [] [] = {4,9,7,0};",
+      "option4":"int myList [] = {4, 3, 7};"
+    },
+    {
+      "Qno":4, 
+      "question":"Suppose that you would like to create an instance of a new Map that has an iteration order that is the same as the iteration order of an existing instance of a Map. Which concrete implementation of the Map interface should be used for the new instance?",
+      "option1":"TreeMap",
+      "option2":"HashMap",
+      "option3":"LinkedHashMap",
+      "option4":"The answer depends on the implementation of the existing instance."
+    },
+    {
+      "Qno":5, 
+      "question":"",
+      "option1":"1 and 4",
+      "option2":"2 and 3",
+      "option3":"3 and 4",
+      "option4":"2 and 4"
+    },
+    {
+      "Qno":6, 
+      "question":"If result = 2 + 3 * 5, what is the value and type of ‘result’ variable?",
+      "option1":" 17, byte",
+      "option2":"25, byte",
+      "option3":"17, int",
+      "option4":"25, int"
+    },
+    {
+      "Qno":7, 
+      "question":"How many numeric data types are supported in Java?",
+      "option1":"8",
+      "option2":"4",
+      "option3":"2",
+      "option4":"6"
+    },
+    {
+      "Qno":8, 
+      "question":"The class java.lang.Exception is",
+      "option1":" protected",
+      "option2":"extends Throwable",
+      "option3":"implements Throwable",
+      "option4":" serializable"
+    },
+    {
+      "Qno":9, 
+      "question":"",
+      "option1":"120 200 016",
+      "option2":"120 200 14",
+      "option3":"120 200 16",
+      "option4":"None"
+    },
+    {
+      "Qno":10, 
+      "question":"Which of the following is synchronized?",
+      "option1":"Set",
+      "option2":"LinkedList",
+      "option3":" Vector",
+      "option4":"WeakHashMap"
+    }
+  ],
+  "Answers":[
+    {"qno":1, "ans":2},
+    {"qno":2, "ans":3},
+    {"qno":3, "ans":4},
+    {"qno":4, "ans":3},
+    {"qno":5, "ans":1},
+    {"qno":6, "ans":3},
+    {"qno":7, "ans":4},
+    {"qno":8, "ans":2},
+    {"qno":9, "ans":2},
+    {"qno":10, "ans":3}
+]
+  }
