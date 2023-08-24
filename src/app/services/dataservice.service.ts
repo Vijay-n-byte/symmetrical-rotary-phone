@@ -11,9 +11,13 @@ export class DataserviceService {
 
  // http://localhost:3000/Questions/?Qno=2
 
-  private root:string="http://localhost:3000/Questions";
-  private root1:string="http://localhost:3000/Questions/?Qno";
-  private root2:string="http://localhost:3000/Answers";
+  // private root:string="http://localhost:3000/Questions";
+  // private root1:string="http://localhost:3000/Questions/?Qno";
+  // private root2:string="http://localhost:3000/Answers";
+
+  private root:string="http://192.168.43.122:3000/Questions";
+  private root1:string="http://192.168.43.122:3000/Questions/?Qno";
+  private root2:string="http://192.168.43.122:3000/Answers";
   public useranswers:Array<number>=[];
 
 

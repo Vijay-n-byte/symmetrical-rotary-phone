@@ -1,4 +1,6 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import {FormsModule, NgForm} from '@angular/forms';
 import {ActivatedRoute,Router} from '@angular/router';
 
 @Component({
@@ -8,7 +10,13 @@ import {ActivatedRoute,Router} from '@angular/router';
 })
 export class StartComponent {
   constructor(private route:ActivatedRoute,private j:Router){}
-  quiztest(){
+  quiztest(h:NgForm){
+    let name:string=h.value.name;
+    let email:string=h.value.email;
+    console.log(name);
+    localStorage.setItem("name",name);
+    localStorage.setItem("email",email);
+    localStorage.setItem("test","1");
     this.j.navigate(['quiz'],{relativeTo:this.route});
   }
 }

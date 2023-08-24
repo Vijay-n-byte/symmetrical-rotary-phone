@@ -10,7 +10,8 @@ import { reviewguardGuard } from '../guards/reviewguard.guard';
 const routes: Routes = [
   {path:'',component:StartComponent},
     {path:'quiz',component:QuizComponent,canActivate:[testguardGuard]},
-    {path:'review',component:ReviewresultComponent,canActivate:[reviewguardGuard]}
+    {path:'review',component:ReviewresultComponent,canActivate:[reviewguardGuard]},
+    {path:"**",redirectTo:''},
 ];
 
 @NgModule({

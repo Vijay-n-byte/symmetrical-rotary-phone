@@ -4,8 +4,10 @@ import { HomepageComponent } from './homepage/homepage.component';
 
 
 const routes: Routes = [
+ 
   {path:'home',component:HomepageComponent,
-    children:[{path:'',loadChildren:()=>import("../app/quiz/quiz.module").then(v=>v.QuizModule)}]}
+    children:[{path:'',loadChildren:()=>import("../app/quiz/quiz.module").then(v=>v.QuizModule)}]},
+  {path:"**",redirectTo:'home'},
 ];
 
 @NgModule({

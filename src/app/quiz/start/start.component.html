@@ -1,4 +1,7 @@
-<div class="homepg">
-    <h3>shall we begin?</h3>
-    <button (click)="quiztest()">start</button>
+<div class="container-fluid s1">
+    <form #sim="ngForm">
+        Name:<input type="text" name="name" ngModel>
+        emailid:<input type="text" name="email" ngModel>
+    </form>
+    <button (click)="quiztest(sim)">start</button>
 </div> 

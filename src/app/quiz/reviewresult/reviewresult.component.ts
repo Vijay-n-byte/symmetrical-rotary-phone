@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Answers } from 'src/app/interfaces/answers';
 import { Qns } from 'src/app/interfaces/qns';
 import { DataserviceService } from 'src/app/services/dataservice.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-reviewresult',
@@ -16,7 +17,7 @@ export class ReviewresultComponent implements OnInit{
   coo:number=0;
 
 
-  constructor(private p:DataserviceService){}
+  constructor(private p:DataserviceService,private d1:Router){}
   ngOnInit() {
     this.fin=this.p.getusersanswer();
     this.p.getcorrectanswers().subscribe(u=>this.cfin=u);
@@ -34,6 +35,10 @@ export class ReviewresultComponent implements OnInit{
     else{
       return false;
     }
-     
+  }
+  removecred(){
+    
+    localStorage.clear();
+    this.d1.navigate(['home']);
   }
 }

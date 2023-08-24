@@ -3,7 +3,8 @@ import { Qns } from 'src/app/interfaces/qns';
 import { DataserviceService } from 'src/app/services/dataservice.service';
 import { NgForm,FormsModule} from '@angular/forms';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { Router } from '@angular/router';
+import { Router ,ActivatedRoute} from '@angular/router';
+import { HomepageComponent } from 'src/app/homepage/homepage.component';
 
 @Component({
   selector: 'app-miss',
@@ -12,12 +13,14 @@ import { Router } from '@angular/router';
   encapsulation:ViewEncapsulation.Emulated
 })
 export class QuizComponent implements OnInit {
+  sample:string|null='';
   public users1:Array<Qns>=[];//nnn-it is for questions array
   public users2:Array<number>=[];//nnn-it saves answers
   constructor(private b:DataserviceService,
-    private c:Router){
+    private c:Router,private route:ActivatedRoute){
   }
   ngOnInit(){ 
+    this.sample=localStorage.getItem("name");
     this.b.getsinglequestions(1).subscribe(j=>this.users1=j);
   }
   changepage(id:number){
@@ -31,6 +34,8 @@ export class QuizComponent implements OnInit {
   }
   submitfinal(){
     this.b.setusersanswers(this.users2);
-    this.c.navigate(['review']);
+    localStorage.setItem("test","0");
+    localStorage.setItem("review","1");
+    this.c.navigate(['../review'],{relativeTo:this.route});
   }
 }
