@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { JwPaginationModule } from 'jw-angular-pagination';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-import { ReviewresultModule } from './reviewresult/reviewresult.module';
 import { HomepageComponent } from './homepage/homepage.component';
 
 
@@ -21,7 +20,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
+    HomepageComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,6 @@ import { HomepageComponent } from './homepage/homepage.component';
     QuizModule,
     CommonModule,
     HttpClientModule,
-    ReviewresultModule,
   ],
   providers: [DataserviceService],
   bootstrap: [AppComponent],

@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,NavigationExtras,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -9,11 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomepageComponent {
 
-  constructor(private r:Router){}
+  constructor(private r:Router,private route:ActivatedRoute){}
 
-  quiztest(){
-    this.r.navigate(['quiz']);
-
-  }
-
+  
 }

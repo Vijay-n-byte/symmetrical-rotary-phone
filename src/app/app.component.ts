@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 // import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'projectangular';
  // private modalService: NgbModal
-  constructor(private j:Router){
+  constructor(private j:Router,private route:ActivatedRoute){
 
   }
 
@@ -19,6 +19,7 @@ export class AppComponent {
     this.j.navigate(['review']);
 
   }
+
 
   // public open(modal: any): void {
   //   this.modalService.open(modal);
