@@ -23,19 +23,39 @@ export class QuizComponent implements OnInit {
     this.sample=localStorage.getItem("name");
     this.b.getsinglequestions(1).subscribe(j=>this.users1=j);
   }
-  changepage(id:number){
-    if(id<=10){
-    this.b.getsinglequestions(id+1).subscribe(j=>this.users1=j);
-    }
-  }
-  submit(f:NgForm){
+  // changepage(id:number){
+  //   if(id<=10){
+  //   this.b.getsinglequestions(id+1).subscribe(j=>this.users1=j);
+  //   }
+  // }
+  // submit(f:NgForm){
+  //   let aa:number=f.value.r;
+  //   this.users2.push(aa);
+  // }
+  // submitfinal(){
+  //   this.b.setusersanswers(this.users2);
+  //   localStorage.setItem("test","0");
+  //   localStorage.setItem("review","1");
+  //   this.c.navigate(['../review'],{relativeTo:this.route});
+  // }
+
+  submitfinal(f:NgForm){
     let aa:number=f.value.r;
     this.users2.push(aa);
-  }
-  submitfinal(){
     this.b.setusersanswers(this.users2);
     localStorage.setItem("test","0");
     localStorage.setItem("review","1");
     this.c.navigate(['../review'],{relativeTo:this.route});
   }
+  changepage(id:number,f:NgForm){
+    let aa:number=f.value.r;
+    this.users2.push(aa);
+    if(id<=10){
+    this.b.getsinglequestions(id+1).subscribe(j=>this.users1=j);
+    }
+  }
+  // submit(f:NgForm){
+  //   let aa:number=f.value.r;
+  //   this.users2.push(aa);
+  // }
 }

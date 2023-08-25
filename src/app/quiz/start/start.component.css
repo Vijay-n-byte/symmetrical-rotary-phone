@@ -1,4 +1,28 @@
 .s1{
-    height: 100%;
-    background-color: black;
+    height: 84vh;
+    background-color: rgb(196, 191, 191);
+}
+
+.container{
+    width:35vw;
+    padding-top: 80px;
+}
+.form-control{
+    margin-bottom: 20px;
+
+}
+.form-group{
+
+}
+button{
+    background-color: blue;
+    color: white;
+    
+}
+@media all and (max-width:600px){
+
+    .container{
+        width:80vw;
+        padding-top: 80px;
+    }
 }

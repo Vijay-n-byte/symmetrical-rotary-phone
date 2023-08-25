@@ -1,3 +1,47 @@
+.container-fluid{
+    height:84vh;
+}
+
+
+#lo{
+    margin-top: 6vh;
+    padding-top: 2vh;
+    padding-left: 2vw;
+    border: solid black 2px;
+    height: 20vh;
+    background-color: oldlace;
+    font-size: 20px;
+    color: darkolivegreen;
+}
+#bot{
+    margin-top: 0px;
+}
+
+.mnn{
+    padding-top:0px;
+    margin-top: 1vh;
+    padding-left: 2vw;
+    color: black;
+    font-size: 20px;
+}
+input[type="radio"]{
+    margin-bottom: 4vh;
+    width: 2vw;
+    height: 2vh;
+}
+#qq{
+    /* margin-left: 51px; */
+
+}
+.bu{
+    /* width: 100px; */
+    width: 13vw;
+    height: 5vh;
+    background-color: coral;
+    border-radius: 10px;
+}
+
+/* 
 .quizdiv {
     border: solid black 2px;
     margin: solid blue 4px;
@@ -42,4 +86,4 @@ input[type="radio"]{
 #qq{
     margin-left: 51px;
 
-}
+} */

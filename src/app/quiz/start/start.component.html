@@ -1,7 +1,15 @@
 <div class="container-fluid s1">
-    <form #sim="ngForm">
-        Name:<input type="text" name="name" ngModel>
-        emailid:<input type="text" name="email" ngModel>
-    </form>
-    <button (click)="quiztest(sim)">start</button>
-</div> 
+    <div class="container">
+        <form #sim="ngForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" ngModel class="form-control">
+            </div>
+            <div class="formgroup">
+                <label for="email">Emailid</label>
+                <input type="text" name="email" ngModel class="form-control">
+            </div>
+            <button (click)="quiztest(sim)" class="form-control">start</button>
+        </form>
+    </div>
+</div>
