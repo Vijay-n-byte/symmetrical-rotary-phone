@@ -48,14 +48,14 @@ export class QuizComponent implements OnInit {
     this.c.navigate(['../review'],{relativeTo:this.route});
   }
   changepage(id:number,f:NgForm){
+    console.log(f);
     let aa:number=f.value.r;
     this.users2.push(aa);
     if(id<=10){
     this.b.getsinglequestions(id+1).subscribe(j=>this.users1=j);
     }
   }
-  // submit(f:NgForm){
-  //   let aa:number=f.value.r;
-  //   this.users2.push(aa);
-  // }
+  submit(){
+   
+  }
 }

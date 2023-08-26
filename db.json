@@ -27,10 +27,10 @@
     {
       "Qno":4, 
       "question":"Suppose that you would like to create an instance of a new Map that has an iteration order that is the same as the iteration order of an existing instance of a Map. Which concrete implementation of the Map interface should be used for the new instance?",
-      "option1":"TreeMap",
+      "option1":"The answer depends on the implementation of the existing instance.",
       "option2":"HashMap",
       "option3":"LinkedHashMap",
-      "option4":"The answer depends on the implementation of the existing instance."
+      "option4":"TreeMap"
     },
     {
       "Qno":5, 

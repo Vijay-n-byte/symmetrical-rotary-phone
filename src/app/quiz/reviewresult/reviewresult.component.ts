@@ -22,7 +22,7 @@ export class ReviewresultComponent implements OnInit{
     this.fin=this.p.getusersanswer();
     this.p.getcorrectanswers().subscribe(u=>this.cfin=u);
     this.p.getquestions().subscribe(y=>this.cfinqns=y);
-
+    localStorage.clear();
   }
 
   
@@ -38,7 +38,7 @@ export class ReviewresultComponent implements OnInit{
   }
   removecred(){
     
-    localStorage.clear();
+   // localStorage.clear();
     this.d1.navigate(['home']);
   }
 }

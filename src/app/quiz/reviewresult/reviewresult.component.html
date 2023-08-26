@@ -1,40 +1,39 @@
-<div id="uu">
-<p id="plm">Results:{{coo}} of 10 correct</p>
-<ul *ngFor="let k of cfinqns;let j=index">
-    <ol start="{{j+1}}">
-        <li>{{k.question}}</li>
-        <ol start="1">
-            <li>{{k.option1}}</li>
-            <li>{{k.option2}}</li>
-            <li>{{k.option3}}</li>
-            <li>{{k.option4}}</li>
-        </ol>
-    </ol>
-    <div class="as">
-        <div *ngIf="opp(j) ; else elseBlock">
-            <!-- <h5 style="color:green">status:correct</h5> -->
-            <h5><img src="https://tse2.mm.bing.net/th?id=OIP.ykd68YWQgm0520T8eXC6YQHaIe&pid=Api&P=0&h=180" width="40px" height="40px"></h5>
-            <h5>correct option:{{cfin[j].ans}}</h5>
-        </div>
-        <ng-template #elseBlock>
-            <!-- <h5 style="color:red">status:wrong </h5> -->
-            <h5><img src="https://tse4.mm.bing.net/th?id=OIP.uPfSagQc2YgANIso4HfChgHaHT&pid=Api&P=0&h=180" width="40px" height="40px" ></h5>
-
-            <h5>correct option:{{cfin[j].ans}}</h5>
-            <h5>your option:{{fin[j]}}</h5>
-        </ng-template>
+<div class="container-fluid s1" style="height: 84vh;">
+    <div id="uu">
+        <p id="plm">Results:{{coo}} of 10 correct</p>
+        <ul *ngFor="let k of cfinqns;let j=index">
+            <ol start="{{j+1}}">
+                <li>{{k.question}}</li>
+                <ol start="1">
+                    <li>{{k.option1}}</li>
+                    <li>{{k.option2}}</li>
+                    <li>{{k.option3}}</li>
+                    <li>{{k.option4}}</li>
+                </ol>
+            </ol>
+            <div class="as">
+                <div *ngIf="opp(j) ; else elseBlock">
+                    <!-- <h5 style="color:green">status:correct</h5> -->
+                    <h5><img src="https://tse2.mm.bing.net/th?id=OIP.ykd68YWQgm0520T8eXC6YQHaIe&pid=Api&P=0&h=180" width="40px" height="40px"></h5>
+                    <h5>correct option:{{cfin[j].ans}}</h5>
+                </div>
+                <ng-template #elseBlock>
+                    <!-- <h5 style="color:red">status:wrong </h5> -->
+                    <h5><img src="https://tse4.mm.bing.net/th?id=OIP.uPfSagQc2YgANIso4HfChgHaHT&pid=Api&P=0&h=180" width="40px" height="40px" ></h5>
+        
+                    <h5>correct option:{{cfin[j].ans}}</h5>
+                    <h5>your option:{{fin[j]}}</h5>
+                </ng-template>
+            </div>
+            <hr>
+        </ul>
+        <button (click)="removecred()">go to home</button>
     </div>
-    <!-- <div *ngIf="opp(j) ; else elseBlock" class="as">
-        <h5 style="color:green">status:correct</h5>
-        <h5>correct option:{{cfin[j].ans}}</h5>
-    </div>
-    <ng-template #elseBlock>
-        <h5 style="color:red">status:wrong </h5>
-        <h5>correct option:{{cfin[j].ans}}</h5>
-        <h5>your option:{{fin[j]}}</h5>
-    </ng-template> -->
-    <hr>
-</ul>
-<button (click)="removecred()">go to home</button>
+    
 </div>
+
+
+
+
+
 

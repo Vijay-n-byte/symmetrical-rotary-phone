@@ -1,41 +1,17 @@
-<!-- <div class="quizdiv">
-    <div *ngFor="let u of users1;let r=index">
-        <h4 id="lo">{{u.question}}</h4>
-        <form #hh="ngForm" (ngSubmit)="submit(hh)" class="mnn">
-            <input type="radio" name="r" value='1' ngModel>{{u.option1}}<br>
-            <input type="radio" name="r" value='2' ngModel>{{u.option2}}<br>
-            <input type="radio" name="r" value='3' ngModel>{{u.option3}}<br>
-            <input type="radio" name="r" value='4' ngModel>{{u.option4}}<br>
-            <input class="bu" type="submit" value="save" [disabled]="hh.submitted"><br><br>
-            
-        </form>
-        <div id="qq">
-            <div *ngIf="!(u.Qno===10); else elseBlock">
-                <button class="bu" (click)="changepage(u.Qno)" *ngIf='!(u.Qno===10)'>next qn</button><br><br> 
-            </div>
-            <ng-template #elseBlock>
-                <button class="bu" (click)="submitfinal()">submit</button>
-            </ng-template>
-            <h5>{{sample}}</h5>
-        </div>
-    </div>
-</div> -->
-
 <div class="container-fluid">
     <div class="row" style="height: 100%;">
         <div class="col-2">
-
         </div>
         <div class="col-8">
             <div *ngFor="let u of users1;let r=index">
                 <div class="row" style="height: 29vh;">
                     <div id="lo">
-                        <h4>{{u.question}}</h4>
+                        <p>{{u.question}}</p>
                     </div>
                 </div>
                 <div class="row" style="height: 37vh;">
                     <div id="bot">
-                        <form #hh="ngForm" class="mnn">
+                        <form #hh="ngForm" class="mnn" (ngSubmit)="submit()">
                             <input type="radio" name="r" value='1' ngModel>{{u.option1}}<br>
                             <input type="radio" name="r" value='2' ngModel>{{u.option2}}<br>
                             <input type="radio" name="r" value='3' ngModel>{{u.option3}}<br>
@@ -49,7 +25,7 @@
                     <div class="col-4">
                         <div id="qq">
                             <div *ngIf="!(u.Qno===10); else elseBlock">
-                                <button class="bu" (click)="changepage(u.Qno,hh)" *ngIf='!(u.Qno===10)' [disabled]="hh.submitted">next</button><br><br> 
+                                <button class="bu" (click)="changepage(u.Qno,hh)" *ngIf='!(u.Qno===10)'>next</button><br><br> 
                             </div>
                             <ng-template #elseBlock>
                                 <button class="bu" (click)="submitfinal(hh)">submit</button>
@@ -61,47 +37,8 @@
 
                 </div>
             </div>
-           
-            <!-- <div *ngFor="let u of users1;let r=index">
-                <h4 id="lo">{{u.question}}</h4>
-                <form #hh="ngForm" class="mnn">
-                    <input type="radio" name="r" value='1' ngModel>{{u.option1}}<br>
-                    <input type="radio" name="r" value='2' ngModel>{{u.option2}}<br>
-                    <input type="radio" name="r" value='3' ngModel>{{u.option3}}<br>
-                    <input type="radio" name="r" value='4' ngModel>{{u.option4}}<br>
-                </form>
-                <div id="qq">
-                    <div *ngIf="!(u.Qno===10); else elseBlock">
-                        <button class="bu" (click)="changepage(u.Qno,hh)" *ngIf='!(u.Qno===10)' [disabled]="hh.submitted">next</button><br><br> 
-                    </div>
-                    <ng-template #elseBlock>
-                        <button class="bu" (click)="submitfinal(hh)">submit</button>
-                    </ng-template>
-                </div>
-            </div> -->
         </div>
         <div class="col-2">
         </div>
     </div>
 </div>
-
-<!-- 
-
-<div *ngFor="let u of users1;let r=index">
-    <h4 id="lo">{{u.question}}</h4>
-    <form #hh="ngForm" (ngSubmit)="submit(hh)" class="mnn">
-        <input type="radio" name="r" value='1' ngModel>{{u.option1}}<br>
-        <input type="radio" name="r" value='2' ngModel>{{u.option2}}<br>
-        <input type="radio" name="r" value='3' ngModel>{{u.option3}}<br>
-        <input type="radio" name="r" value='4' ngModel>{{u.option4}}<br>
-        <input class="bu" type="submit" value="save" [disabled]="hh.submitted"><br><br>
-    </form>
-    <div id="qq">
-        <div *ngIf="!(u.Qno===10); else elseBlock">
-            <button class="bu" (click)="changepage(u.Qno)" *ngIf='!(u.Qno===10)'>next qn</button><br><br> 
-        </div>
-        <ng-template #elseBlock>
-            <button class="bu" (click)="submitfinal()">submit</button>
-        </ng-template>
-    </div>
-</div> -->
