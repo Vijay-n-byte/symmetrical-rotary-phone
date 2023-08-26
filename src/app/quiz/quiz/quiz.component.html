@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="row" style="height: 100%;">
-        <div class="col-2">
+        <div class="col-md-2">
         </div>
-        <div class="col-8">
+        <div class="col-md-8">
             <div *ngFor="let u of users1;let r=index">
                 <div class="row" style="height: 29vh;">
                     <div id="lo">
@@ -12,10 +12,14 @@
                 <div class="row" style="height: 37vh;">
                     <div id="bot">
                         <form #hh="ngForm" class="mnn" (ngSubmit)="submit()">
-                            <input type="radio" name="r" value='1' ngModel>{{u.option1}}<br>
-                            <input type="radio" name="r" value='2' ngModel>{{u.option2}}<br>
-                            <input type="radio" name="r" value='3' ngModel>{{u.option3}}<br>
-                            <input type="radio" name="r" value='4' ngModel>{{u.option4}}<br>
+                            <div class="rad"> <input type="radio" name="r" value='1' id="option1" ngModel>
+                                <label for="option1" >{{u.option1}}</label><br></div>
+                            <div class="rad"><input type="radio" name="r" value='2' id="option2" ngModel>
+                                <label for="option2">{{u.option2}}</label><br></div>
+                            <div class="rad"><input type="radio" name="r" value='3' id="option3" ngModel>
+                                <label for="option3">{{u.option3}}</label><br></div>
+                            <div class="rad"><input type="radio" name="r" value='4' id="option4" ngModel>
+                                <label for="option4">{{u.option4}}</label><br></div>
                         </form>
                     </div>
                 </div>
@@ -38,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-md-2">
         </div>
     </div>
 </div>

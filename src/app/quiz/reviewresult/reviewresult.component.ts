@@ -37,8 +37,6 @@ export class ReviewresultComponent implements OnInit{
     }
   }
   removecred(){
-    
-   // localStorage.clear();
     this.d1.navigate(['home']);
   }
 }

@@ -22,28 +22,13 @@ export class QuizComponent implements OnInit {
   ngOnInit(){ 
     this.sample=localStorage.getItem("name");
     this.b.getsinglequestions(1).subscribe(j=>this.users1=j);
+    localStorage.setItem("test","0");//now
   }
-  // changepage(id:number){
-  //   if(id<=10){
-  //   this.b.getsinglequestions(id+1).subscribe(j=>this.users1=j);
-  //   }
-  // }
-  // submit(f:NgForm){
-  //   let aa:number=f.value.r;
-  //   this.users2.push(aa);
-  // }
-  // submitfinal(){
-  //   this.b.setusersanswers(this.users2);
-  //   localStorage.setItem("test","0");
-  //   localStorage.setItem("review","1");
-  //   this.c.navigate(['../review'],{relativeTo:this.route});
-  // }
-
   submitfinal(f:NgForm){
     let aa:number=f.value.r;
     this.users2.push(aa);
     this.b.setusersanswers(this.users2);
-    localStorage.setItem("test","0");
+    // localStorage.setItem("test","0");
     localStorage.setItem("review","1");
     this.c.navigate(['../review'],{relativeTo:this.route});
   }

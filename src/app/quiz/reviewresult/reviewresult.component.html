@@ -13,12 +13,10 @@
             </ol>
             <div class="as">
                 <div *ngIf="opp(j) ; else elseBlock">
-                    <!-- <h5 style="color:green">status:correct</h5> -->
                     <h5><img src="https://tse2.mm.bing.net/th?id=OIP.ykd68YWQgm0520T8eXC6YQHaIe&pid=Api&P=0&h=180" width="40px" height="40px"></h5>
                     <h5>correct option:{{cfin[j].ans}}</h5>
                 </div>
                 <ng-template #elseBlock>
-                    <!-- <h5 style="color:red">status:wrong </h5> -->
                     <h5><img src="https://tse4.mm.bing.net/th?id=OIP.uPfSagQc2YgANIso4HfChgHaHT&pid=Api&P=0&h=180" width="40px" height="40px" ></h5>
         
                     <h5>correct option:{{cfin[j].ans}}</h5>
@@ -29,7 +27,6 @@
         </ul>
         <button (click)="removecred()">go to home</button>
     </div>
-    
 </div>
 
 
