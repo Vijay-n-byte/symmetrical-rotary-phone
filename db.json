@@ -1,4 +1,10 @@
 {
+  "Details":[
+    {
+      "Totalquestions":11,
+      "Totaltimings":40
+    }
+  ],
   "Questions":[
     {
       "Qno":1, 
@@ -79,6 +85,14 @@
       "option2":"LinkedList",
       "option3":"Vector",
       "option4":"WeakHashMap"
+    },
+    {
+      "Qno":11, 
+      "question":"Which",
+      "option1":"Set11",
+      "option2":"LinkedList11",
+      "option3":"Vector11",
+      "option4":"WeakHashMap11"
     }
   ],
   "Answers":[
@@ -91,6 +105,7 @@
     {"qno":7, "ans":4},
     {"qno":8, "ans":2},
     {"qno":9, "ans":2},
-    {"qno":10, "ans":3}
+    {"qno":10, "ans":3},
+    {"qno":11, "ans":1}
 ]
   }

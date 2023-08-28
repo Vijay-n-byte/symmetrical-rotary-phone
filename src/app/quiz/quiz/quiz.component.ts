@@ -6,6 +6,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { Router ,ActivatedRoute} from '@angular/router';
 import { HomepageComponent } from 'src/app/homepage/homepage.component';
 import {Subject, interval,take, takeUntil} from 'rxjs';
+import { BaseDetails } from 'src/app/base_details';
+import { Testdetails } from 'src/app/interfaces/testdetails';
 
 @Component({
   selector: 'app-miss',
@@ -14,8 +16,9 @@ import {Subject, interval,take, takeUntil} from 'rxjs';
   encapsulation:ViewEncapsulation.Emulated
 })
 export class QuizComponent implements OnInit,OnDestroy{
+  totalques:number=0;
   sample:string|null='';
-  y:number=60;
+  y:number=0;
   timee=interval(1000).subscribe(n=>{
     this.y--;
     if(this.y===0){
@@ -32,6 +35,10 @@ export class QuizComponent implements OnInit,OnDestroy{
     private c:Router,private route:ActivatedRoute){
   }
   ngOnInit(){ 
+    this.b.getdetails().subscribe(n=>{
+      this.totalques=n[0].Totalquestions;
+      this.y=n[0].Totaltimings;
+    });
     this.sample=localStorage.getItem("name");
     this.b.getsinglequestions(1).subscribe(j=>this.users1=j);
     localStorage.setItem("test","0");//now
@@ -50,7 +57,8 @@ export class QuizComponent implements OnInit,OnDestroy{
   changepage(id:number,f:NgForm){
     let aa:number=f.value.r;
     this.users2.push(aa);
-    if(id<=10){
+    // if(id<=10){
+    if(id<=this.totalques){
     this.b.getsinglequestions(id+1).subscribe(j=>this.users1=j);
     }
   }

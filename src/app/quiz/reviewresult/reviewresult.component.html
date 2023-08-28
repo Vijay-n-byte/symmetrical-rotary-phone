@@ -1,6 +1,6 @@
 <div class="container-fluid s1" style="height: 84vh;">
     <div id="uu">
-        <p id="plm">Results:{{coo}} of 10 correct</p>
+        <p id="plm">Results:{{coo}} of {{totalques}} correct</p>
         <ul *ngFor="let k of cfinqns;let j=index">
             <ol start="{{j+1}}">
                 <li>{{k.question}}</li>

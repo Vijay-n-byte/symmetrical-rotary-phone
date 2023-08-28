@@ -14,6 +14,7 @@ export class ReviewresultComponent implements OnInit{
   public fin:Array<number>=[];
   public cfin:Array<Answers>=[];
   public cfinqns:Array<Qns>=[];
+  public totalques:number=0;
   coo:number=0;
 
 
@@ -21,7 +22,10 @@ export class ReviewresultComponent implements OnInit{
   ngOnInit() {
     this.fin=this.p.getusersanswer();
     this.p.getcorrectanswers().subscribe(u=>this.cfin=u);
-    this.p.getquestions().subscribe(y=>this.cfinqns=y);
+    this.p.getquestions().subscribe(y=>{
+      this.cfinqns=y;
+      this.totalques=y.length;
+    });
     localStorage.clear();
   }
 

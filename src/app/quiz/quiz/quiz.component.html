@@ -29,8 +29,8 @@
                     </div>
                     <div class="col-4">
                         <div id="qq">
-                            <div *ngIf="!(u.Qno===10); else elseBlock">
-                                <button class="bu" (click)="changepage(u.Qno,hh)" *ngIf='!(u.Qno===10)'>next</button><br><br> 
+                            <div *ngIf="!(u.Qno===totalques); else elseBlock">
+                                <button class="bu" (click)="changepage(u.Qno,hh)" *ngIf='!(u.Qno===totalques)'>next</button><br><br> 
                             </div>
                             <ng-template #elseBlock>
                                 <button class="bu" (click)="submitfinal(hh)">submit</button>
